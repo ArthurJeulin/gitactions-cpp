@@ -33,4 +33,4 @@ RUN cd ${DEV_FOLDER} \
     && cmake -S . -B build \
     && cmake --build build
 
-ENTRYPOINT ["bash"]
+CMD ["./usr/src/project/build/docker-cpp"]
