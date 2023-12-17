@@ -1,0 +1,14 @@
+name: Build and Run Docker Container
+
+on: [push, pull_request]
+
+jobs:
+  build_and_run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and Run Docker
+      run: |
+        chmod +x ./install-docker-cpp.sh
+        ./install-docker-cpp.sh
